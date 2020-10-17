@@ -31,3 +31,21 @@
 .container-videos a:visited{
     color: black;
 }
+
+/* video.html */
+
+.video-img-horizontal{
+    height: 120px;
+    width: 100%;
+}
+
+.card-color-horizontal a{
+    color: black;
+}
+
+.card-color-horizontal a:hover{
+    color: black;
+}
+.card-color-horizontal a:visited{
+    color: black;
+}
