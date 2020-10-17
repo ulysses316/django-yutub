@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  },
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

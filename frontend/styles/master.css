@@ -1,0 +1,25 @@
+.circle-img{
+    border-radius: 100%;
+}
+
+.container-videos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 20px;
+}
+
+.video-img{
+    height: 200px;
+    width: 100%;
+}
+
+.container-videos a{
+    color: black;
+}
+
+.container-videos a:hover{
+    color: black;
+}
+.container-videos a:visited{
+    color: black;
+}
