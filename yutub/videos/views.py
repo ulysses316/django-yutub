@@ -3,7 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Index")
+    return render(request, "index.html")
 
 def video(request):
     return HttpResponse("Video")
