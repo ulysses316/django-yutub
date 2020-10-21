@@ -1,2 +1,3 @@
 venv
 frontend/node_modules
+yutub/db.sqlite3
