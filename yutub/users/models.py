@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class User(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    mail = models.models.EmailField(max_length=60)
+    mail = models.EmailField(max_length=60)
     profile_picture = models.ImageField(
         upload_to = "user/pictures",
         blank = True,
