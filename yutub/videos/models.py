@@ -5,7 +5,7 @@ from django.db import models
 class Video(models.Model):
     title = models.CharField(max_length=30, null=False, blank=False)
     date = models.DateField(auto_now=False, auto_now_add=True)
-    media = models.FileField(upload_to="videos/media_upload", max_length=100)
+    media = models.FileField(upload_to="static/videos/media_upload", max_length=100)
     description = models.TextField(blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 

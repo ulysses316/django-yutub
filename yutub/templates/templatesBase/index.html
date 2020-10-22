@@ -6,7 +6,8 @@
         <div class="container">
             <div class="container-videos">
                 <!-- Card Video -->
-                <a href="">
+                {% for video in all_videos %}
+                <a href="watch/{{video.id}}">
                     <div class="card" style="width: 90%;">
                         <img src="https://picsum.photos/id/100/200/300" class="card-img-top video-img" alt="...">
                         <div class="card-body">
@@ -15,14 +16,15 @@
                                     <img src="https://picsum.photos/id/100/200/300" class="circle-img" width="100%" alt="">
                                 </div>
                                 <div class="col-md-9 info-video">
-                                    <b>Titulo del video</b>
-                                    <p class="m-0 text-secondary">Nombre del canal</p>
-                                    <p class="m-0 text-secondary">Cuando se subio</p>
+                                    <b>{{ video.title }}</b>
+                                    <p class="m-0 text-secondary">{{ video.user.username }}</p>
+                                    <p class="m-0 text-secondary">{{ video.date }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </a>
+                {% endfor %}
             </div>
         </div>
     </section>
