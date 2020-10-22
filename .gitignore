@@ -2,3 +2,7 @@ venv
 frontend/node_modules
 yutub/db.sqlite3
 yutub/static/node_modules/
+yutub/videos/media_upload/
+frontend
+yutub/videos/migrations/
+yutub/users/migrations/

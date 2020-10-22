@@ -18,8 +18,8 @@ from django.urls import path, include
 from videos.views import index
 
 urlpatterns = [
-    path("", index, name="index"),
     path('admin/', admin.site.urls),
-    path('videos/', include('videos.urls')),
-    path('users/', include('users.urls')),
+    path("", index, name="index"),
+    path('', include('videos.urls')),
+    path('', include('users.urls')),
 ]
