@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
 from .models import Video
+
 # Create your views here.
 
 def index(request):
@@ -19,9 +20,15 @@ def video(request,video_id):
     }
     print (video_media)
     return render(request, "templatesBase/video.html", context)
-
-def info(request):
-    return HttpResponse("Info")
     
+@login_required
 def upload(request):
-    return HttpResponse("Upload")
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        fileMedia = request.POST.get('fileMedia')
+        user = request.user
+        video = Video(title=title, description=description, user=user, media=fileMedia)
+        video.save()
+        return redirect('/')
+    return render(request, "templatesBase/upload.html")

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <!-- Login -->
+    <section style="height: 90vh; width: 100vw;">
+        <div class="h-100 d-flex justify-content-center align-items-center">
+            <div class="card text-cesnter w-50">
+                <div class="card-header text-center">
+                  Subir video
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'upload' %}" method="POST">
+                      {% csrf_token %}
+                        <div class="form-group">
+                           <div class="text-center">
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                           </div>
+                          <label for="exampleInputEmail1">Titulo del video</label>
+                          <input name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Descripcion</label>
+                          <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlFile1">Example file input</label>
+                            <input name="fileMedia" type="file" class="form-control-file" id="exampleFormControlFile1">
+                          </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-dark">Subir</button>
+                        </div>
+                      </form>
+                </div>
+              </div>
+        </div>
+    </section>
+
+{% endblock content %}

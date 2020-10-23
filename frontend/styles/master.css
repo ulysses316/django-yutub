@@ -16,6 +16,23 @@
     row-gap: 20px;
 }
 
+.card-size{
+    width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-videos{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .esconder{
+        display: none;
+    }
+    .card-size{
+        width: 100%;
+    }
+  }
+
 .video-img{
     height: 200px;
     width: 100%;
