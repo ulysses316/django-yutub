@@ -10,7 +10,7 @@
                   Subir video
                 </div>
                 <div class="card-body">
-                    <form action="{% url 'upload' %}" method="POST">
+                    <form enctype="multipart/form-data" method="POST">
                       {% csrf_token %}
                         <div class="form-group">
                            <div class="text-center">
@@ -26,8 +26,8 @@
                           <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                           <div class="form-group">
-                            <label for="exampleFormControlFile1">Example file input</label>
-                            <input name="fileMedia" type="file" class="form-control-file" id="exampleFormControlFile1">
+                            <label for="exampleFormControlFile1">Seleccionar video</label>
+                            <input name="fileMedia" type="file" accept="video/*" class="form-control-file" id="exampleFormControlFile1">
                           </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-dark">Subir</button>

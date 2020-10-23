@@ -29,3 +29,12 @@ Si no podemos crear el ambiente virtual habra que instalarlo.
 3. Instalar dependencias.
 
 `pip install -r requirements.txt`
+
+4. Hacer migraciones y correr el servidor
+
+`python manage.py migrate`
+`python manage.py runserver`
+
+5. Para salir del entorno virtual
+
+`deactivate`
