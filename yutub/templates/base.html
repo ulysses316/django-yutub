@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block head_content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+<title>Yutub</title>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'styles/master.css' %}">
+    <link rel="stylesheet" href="{% static './node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    
+</head>
+<body class="bg-dark">
+    {% include 'navbar.html' %}
+
+    {% block content%}
+    {% endblock %}
+
+    <script src="{% static './node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <!-- Login -->
+    <section style="height: 90vh; width: 100vw;">
+        <div class="h-100 d-flex justify-content-center align-items-center">
+            <div class="card text-cesnter w-50">
+                <div class="card-header text-center">
+                  Iniciar sesion
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'signup' %}" method="POST">
+                      {% csrf_token %}
+                        <div class="form-group">
+                           <div class="text-center">
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                           </div>
+                          <label for="exampleInputEmail1">Nombre de usuario</label>
+                          <input name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Contraseña</label>
+                          <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input name="firstname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1">Apellidos</label>
+                        <input name="lastname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1">Correo</label>
+                        <input name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-dark">Crear usuario</button>
+                        </div>
+                      </form>
+                </div>
+              </div>
+        </div>
+    </section>
+
+{% endblock content %}

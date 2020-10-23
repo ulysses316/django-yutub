@@ -1,0 +1,78 @@
+.bi::before {
+    display: inline-block;
+    content: "";
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+    
+.circle-img{
+    border-radius: 100%;
+}
+
+.container-videos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 20px;
+}
+
+.card-size{
+    width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-videos{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .esconder{
+        display: none;
+    }
+    .card-size{
+        width: 100%;
+    }
+  }
+
+.video-img{
+    height: 200px;
+    width: 100%;
+}
+
+.container-videos a{
+    color: black;
+}
+
+.container-videos a:hover{
+    color: black;
+}
+.container-videos a:visited{
+    color: black;
+}
+
+/* video.html */
+
+.video-img-horizontal{
+    height: 120px;
+    width: 100%;
+}
+
+.card-color-horizontal a{
+    color: black;
+}
+
+.card-color-horizontal a:hover{
+    color: black;
+}
+.card-color-horizontal a:visited{
+    color: black;
+}
+
+/* General */
+
+hr{
+  overflow: visible;
+  text-align: inherit;
+  margin: 0 0 20px 0;
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+}

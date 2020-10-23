@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Videos Section-->
+    <section>
+        <div class="container">
+            <div class="container-videos">
+                <!-- Card Video -->
+                {% for video in all_videos %}
+                <a href="watch/{{video.id}}">
+                    <div class="card card-size">
+                        <img src="https://picsum.photos/id/100/200/300" class="card-img-top video-img" alt="...">
+                        <div class="card-body">
+                            <div class="row">
+                                <div style="" class="col-md-3 esconder">
+                                    <img src="https://picsum.photos/id/100/200/300" class="circle-img" width="100%" alt="">
+                                </div>
+                                <div class="col-md-9 info-video">
+                                    <b>{{ video.title }}</b>
+                                    <p class="m-0 text-secondary">{{ video.user.username }}</p>
+                                    <p class="m-0 text-secondary">{{ video.date }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Video section -->
+    <section>
+        <div class="container card-color-horizontal">
+            <div class="row">
+                <div class="col-md-8">
+                {% load static %}
+                    <video preload="auto" controls src="{{static}}/{{video_principal.0.media}}" width="100%"></video>
+                    <div class="mt-3 mb-3">
+                        <h5 class="text-white">{{video_principal.0.title}}</h5>
+                    </div>
+                    <hr>
+                    <p class="text-white">{{video_principal.0.description}}</p>
+                </div>
+                <div class="col-md-4">
+                    <!-- Video Card -->
+                {% for video in all_videos %}
+                    <a href="">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                              <div class="col-md-5">
+                                <img src="https://picsum.photos/id/100/200/300" class="card-img video-img-horizontal" alt="...">
+                              </div>
+                              <div class="col-md-7">
+                                <div class="card-body">
+                                    <b>{{video.title}}</b>
+                                    <p class="m-0 text-secondary">{{video.user.username}}</p>
+                                    <p class="m-0 text-secondary">{{video.date}}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </a>        
+                {% endfor %}        
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

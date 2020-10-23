@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/master.css">
+    <title>Yutub</title>
+</head>
+<body class="bg-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+        <img src="./img/yutub-logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        Yutub <sup style="font-size: 10px;">MX</sup>
+        </a>
+        <a href="login.html" class="btn btn-light">
+            <svg  width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+            Iniciar sesion
+        </a>
+    </nav>
+
+    <!-- Video section -->
+    <section>
+        <div class="container card-color-horizontal">
+            <div class="row">
+                <div class="col-md-8">
+                    <video preload="auto" controls src="./img/Toro Y Moi So Many Details.mp4" width="100%"></video>
+                    <div class="mt-3 mb-3">
+                        <h5 class="text-white">Titulo del video</h5>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-4">
+                    <!-- Video Card -->
+                    <a href="">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                              <div class="col-md-5">
+                                <img src="https://picsum.photos/id/100/200/300" class="card-img video-img-horizontal" alt="...">
+                              </div>
+                              <div class="col-md-7">
+                                <div class="card-body">
+                                    <b>Titulo del video</b>
+                                    <p class="m-0 text-secondary">Nombre del canal</p>
+                                    <p class="m-0 text-secondary">Cuando se subio</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                    </a>                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
